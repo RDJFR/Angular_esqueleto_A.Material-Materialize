@@ -1,0 +1,63 @@
+<mat-sidenav-container class="sidenav-container" [class.mat-elevation-z4]="!isActive">
+
+	<mat-sidenav-content>
+		<mat-toolbar color="warn">
+
+		</mat-toolbar>
+	</mat-sidenav-content>
+
+</mat-sidenav-container>
+
+<div class="container">
+	<div class="row">
+		<div class="col s0 m2"></div>
+		<div id="cajon" class="col s12 m8 hoverable center-align">
+			<h1 class="center-align">Sign up</h1>
+
+			<div class="row">
+				<div class="col s2"></div>
+				<div class="input-field col s8 ">
+					<input id="nombre" type="text" class="validate">
+					<label for="nombre">Nombre</label>
+				</div>
+				<div class="col s2"></div>
+			</div>
+
+			<div class="row">
+				<div class="col s2"></div>
+				<div class="input-field col s8 ">
+					<input id="email" type="email" class="validate">
+					<label for="email">Email</label>
+				</div>
+				<div class="col s2"></div>
+			</div>
+
+			<div class="row">
+				<div class="col s2"></div>
+				<div class="input-field col s8">
+					<input id="password" [type]="hide ? 'password' : 'text'" class="validate">
+					<label for="password">Password<mat-icon id="iconPass" class="right" matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon></label>
+				</div>
+				<div class="col s2"></div>
+			</div>
+
+			<div class="row">
+				<div class="col s2"></div>
+				<div class="input-field col s8">
+					<input id="password2" [type]="'password'" class="validate">
+					<label for="password2">Confirm Password</label>
+				</div>
+				<div class="col s2"></div>
+			</div>
+
+			<div class="row">
+				<a class="waves-effect waves-light btn  deep-orange lighten-1" routerLink="/inicio"><i class="material-icons right"></i>Register</a>
+			</div>
+
+			<div class="row">
+				<a [routerLink]="['/login']">¿Ya tienes una cuenta?</a>    
+			</div>
+
+		</div>
+	</div>
+</div>
